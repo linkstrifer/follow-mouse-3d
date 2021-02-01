@@ -1,0 +1,20 @@
+:root {
+  --x: 10deg;
+  --y: 100deg;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  justify-content: space-around;
+  perspective: 50em;
+}
+
+.box {
+  background-color: fuchsia;
+  margin: 5vh;
+  height: 20vh;
+  transform: rotateX(var(--x)) rotateY(var(--y));
+  width: 20vh;
+}
