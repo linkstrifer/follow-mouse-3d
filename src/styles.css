@@ -11,6 +11,12 @@ body {
   perspective: 50em;
 }
 
+body.small .box {
+  height: 10px;
+  margin: 1vh;
+  width: 10px;
+}
+
 .box {
   background-color: fuchsia;
   margin: 5vh;

@@ -1,4 +1,5 @@
 const container = document.documentElement;
+const boxes = document.querySelectorAll(".box");
 
 document.addEventListener("mousemove", ({ x, y }) => {
   const { height, width } = container.getBoundingClientRect();
@@ -6,11 +7,14 @@ document.addEventListener("mousemove", ({ x, y }) => {
     x: width / (2 * 80),
     y: height / (2 * 80)
   };
-  document.querySelectorAll(".box").forEach((box) => {
-    setCoordinates({
-      element: box,
-      mouse: { x, y },
-      degUnit
+
+  window.requestAnimationFrame(() => {
+    boxes.forEach((box) => {
+      setCoordinates({
+        element: box,
+        mouse: { x, y },
+        degUnit
+      });
     });
   });
 });
